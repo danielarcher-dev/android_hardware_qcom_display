@@ -9,7 +9,8 @@ ifneq ($(TARGET_IS_HEADLESS), true)
     common_flags += -DCOMPILE_DRM
 else
     common_flags += -DTARGET_HEADLESS
-    LOCAL_CLANG := false
+    # 2020-10-27    Daniel Archer           LOCAL_CLANG = false no longer supported. changed to true
+    LOCAL_CLANG := true
 endif
 
 ifeq ($(TARGET_USES_COLOR_METADATA), true)
