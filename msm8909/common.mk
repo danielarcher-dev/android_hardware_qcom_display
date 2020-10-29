@@ -9,7 +9,8 @@ common_flags := -DDEBUG_CALC_FPS -Wno-missing-field-initializers
 common_flags += -Wconversion -Wall -Werror -std=c++14
 ifeq ($(TARGET_IS_HEADLESS), true)
     common_flags += -DTARGET_HEADLESS
-    LOCAL_CLANG := false
+    # 2020-10-27    Daniel Archer           LOCAL_CLANG = false no longer supported. changed to true
+    LOCAL_CLANG := true
 endif
 
 ifeq ($(display_config_version), DISPLAY_CONFIG_1_1)
